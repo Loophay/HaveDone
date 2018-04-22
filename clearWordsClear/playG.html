@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script>
+	window.onload=function(){
+	var charSheet=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+	var lengt=5;
+	var speed=10;
+	var currentArr=[];
+	var cw=innerWidth;
+	getChar(lengt);
+	function getChar(length){
+		for(var i=0;i<length;i++){
+			var num=Math.floor(Math.random()*charSheet.length);
+			currentArr.push(charSheet[num]);
+			var div=document.createElement('div');
+			var left=(cw-200)*Math.random()+100;
+			var top=Math.random()*100;
+			div.style.cssText="text-align:center;line-height:50px;width:50px;heigh:50px;background:#dfdfdf;color:#0085d0;border-radius:3px;position:absolute;top:"+top+"px;left:"+left+"px";
+		    div.innerText=charSheet[num];
+		    document.body.appendChild(div); 
+		}
+	}
+}
+	
+</script>
+<body>
+	
+</body>
+</html>
